@@ -1,0 +1,168 @@
+{
+    "fileVersion": 0,
+    "serverMaxRevisionCounter": 206,
+    "sourceMembers": {
+        "Profile__Admin": {
+            "memberType": "Profile",
+            "serverRevisionCounter": 172,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "PermissionSetGroup__force__ScaleCenterUsers": {
+            "memberType": "PermissionSetGroup",
+            "serverRevisionCounter": 26,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "PermissionSetGroup__force__SalesWorkspacePSG": {
+            "memberType": "PermissionSetGroup",
+            "serverRevisionCounter": 24,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "CustomObject__Siri__c": {
+            "memberType": "CustomObject",
+            "serverRevisionCounter": 27,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "CustomField__Knowledge__kav.inr__c": {
+            "memberType": "CustomField",
+            "serverRevisionCounter": 136,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "StaticResource__SiteSamples": {
+            "memberType": "StaticResource",
+            "serverRevisionCounter": 137,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "CustomObject__Knowledge__kav": {
+            "memberType": "CustomObject",
+            "serverRevisionCounter": 138,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "CustomObject__Pachi__c": {
+            "memberType": "CustomObject",
+            "serverRevisionCounter": 201,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "ApexClass__OrgHealthCheck": {
+            "memberType": "ApexClass",
+            "serverRevisionCounter": 141,
+            "lastRetrievedFromServer": 141,
+            "isNameObsolete": false
+        },
+        "ApexClass__SmokeTests": {
+            "memberType": "ApexClass",
+            "serverRevisionCounter": 145,
+            "lastRetrievedFromServer": 145,
+            "isNameObsolete": false
+        },
+        "CustomField__Pachi__c.no__c": {
+            "memberType": "CustomField",
+            "serverRevisionCounter": 197,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "CustomObject__nithwik__c": {
+            "memberType": "CustomObject",
+            "serverRevisionCounter": 200,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "CustomObject__shashi__c": {
+            "memberType": "CustomObject",
+            "serverRevisionCounter": 204,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "CustomField__ved__c.no__c": {
+            "memberType": "CustomField",
+            "serverRevisionCounter": 195,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "CustomObject__ved__c": {
+            "memberType": "CustomObject",
+            "serverRevisionCounter": 202,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "Layout__ved__c-ved Layout": {
+            "memberType": "Layout",
+            "serverRevisionCounter": 203,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "CustomObject__maguva__c": {
+            "memberType": "CustomObject",
+            "serverRevisionCounter": 206,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "CustomField__Test1__c.Mobile_Number__c": {
+            "memberType": "CustomField",
+            "serverRevisionCounter": 192,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "CustomObject__Test1__c": {
+            "memberType": "CustomObject",
+            "serverRevisionCounter": 205,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "ListView__Test1__c.All": {
+            "memberType": "ListView",
+            "serverRevisionCounter": 161,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "CustomField__hero__c.mobile__c": {
+            "memberType": "CustomField",
+            "serverRevisionCounter": 193,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "CustomObject__hero__c": {
+            "memberType": "CustomObject",
+            "serverRevisionCounter": 198,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "Layout__hero__c-hero Layout": {
+            "memberType": "Layout",
+            "serverRevisionCounter": 199,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "CustomField__ved__c.sick__c": {
+            "memberType": "CustomField",
+            "serverRevisionCounter": 196,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "CustomField__ved__c.doit__c": {
+            "memberType": "CustomField",
+            "serverRevisionCounter": 171,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": true
+        },
+        "Profile__Read Only": {
+            "memberType": "Profile",
+            "serverRevisionCounter": 174,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "PermissionSet__Test_P1": {
+            "memberType": "PermissionSet",
+            "serverRevisionCounter": 191,
+            "lastRetrievedFromServer": 191,
+            "isNameObsolete": false
+        }
+    }
+}

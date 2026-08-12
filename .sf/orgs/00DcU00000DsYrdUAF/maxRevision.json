@@ -1,0 +1,48 @@
+{
+    "fileVersion": 0,
+    "serverMaxRevisionCounter": 33,
+    "sourceMembers": {
+        "PermissionSetGroup__force__ScaleCenterUsers": {
+            "memberType": "PermissionSetGroup",
+            "serverRevisionCounter": 25,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "PermissionSetGroup__force__SalesWorkspacePSG": {
+            "memberType": "PermissionSetGroup",
+            "serverRevisionCounter": 27,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "Profile__Admin": {
+            "memberType": "Profile",
+            "serverRevisionCounter": 30,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "ApexClass__OrgHealthCheck": {
+            "memberType": "ApexClass",
+            "serverRevisionCounter": 29,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "ApexClass__SmokeTests": {
+            "memberType": "ApexClass",
+            "serverRevisionCounter": 31,
+            "lastRetrievedFromServer": null,
+            "isNameObsolete": false
+        },
+        "PermissionSet__Test_P10": {
+            "memberType": "PermissionSet",
+            "serverRevisionCounter": 32,
+            "lastRetrievedFromServer": 32,
+            "isNameObsolete": false
+        },
+        "CustomObject__amma__c": {
+            "memberType": "CustomObject",
+            "serverRevisionCounter": 33,
+            "lastRetrievedFromServer": 33,
+            "isNameObsolete": false
+        }
+    }
+}

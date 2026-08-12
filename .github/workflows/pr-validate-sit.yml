@@ -1,0 +1,82 @@
+name: SIT PR Validation
+
+on:
+  pull_request:
+    branches: [sit]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sit-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    environment: sit-validation
+    timeout-minutes: 60
+    env:
+      SF_TARGET_ORG: SIT
+      SF_TEST_LEVEL: RunLocalTests
+      SGD_VERSION: 7.2.0
+
+    steps:
+      - name: Checkout PR commit with full history
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Install Salesforce CLI and SGD
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --global @salesforce/cli@2
+          echo y | sf plugins install "sfdx-git-delta@${SGD_VERSION}"
+          sf version
+          sf plugins
+      - name: Make scripts executable
+        shell: bash
+        run: |
+          chmod +x scripts/*.sh
+          ls -la scripts
+
+      - name: Authenticate to SIT
+        shell: bash
+        env:
+          SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL }}
+        run: ./scripts/authenticate.sh "$SF_TARGET_ORG"
+
+      - name: Generate PR delta
+        shell: bash
+        env:
+          FROM_REF: ${{ github.event.pull_request.base.sha }}
+          TO_REF: ${{ github.event.pull_request.head.sha }}
+        run: ./scripts/generate-delta.sh "$FROM_REF" "$TO_REF" delta
+
+      - name: Validate delta against SIT
+        id: validate
+        shell: bash
+        run: ./scripts/deploy-delta.sh validate delta "$SF_TARGET_ORG" "$SF_TEST_LEVEL"
+
+      - name: Upload generated manifests
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sit-pr-delta-${{ github.event.pull_request.number }}
+          path: |
+            delta/package/package.xml
+            delta/destructiveChanges/destructiveChanges.xml
+            delta/component-version-map.csv
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Logout and remove auth file
+        if: always()
+        shell: bash
+        run: |
+          sf org logout --target-org "$SF_TARGET_ORG" --no-prompt || true
+          rm -f .sf-auth-url.txt
